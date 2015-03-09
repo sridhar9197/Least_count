@@ -1,0 +1,26 @@
+<%= link_to 'New Score', new_score_path  %>
+<html>
+<head>
+    <title>LEAST COUNT</title>
+</head>
+<body onload="load()" background="http://www.recapo.com/wp-content/uploads/2013/01/cards.jpg">
+<div id="myform">
+<table>
+    <thead><Center>
+        <th>Name <%= link_to score.name, score_path(score) %>< /th><br></br>
+        <th>Points:<%= score.points %></th></Center>
+    </thead>
+    <tbody>
+<% @score.each do |score| %>
+    <tr>
+        <td><%= score.name %></td>
+        <td><%= score.points %></td>
+    </tr>
+
+<% end %>
+    </tbody>
+</table>
+
+</div>
+</body>
+</html>
